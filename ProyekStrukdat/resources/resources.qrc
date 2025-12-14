@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/images">
-        <file>images/lokasi.png</file>
+    <qresource prefix="/logo">
+        <file>logo/lokasi.png</file>
     </qresource>
 </RCC>

@@ -70,7 +70,7 @@ public:
         wadah_logo->setLineWidth(0);
         logo = new QFrame(wadah_logo);
         logo->setObjectName("logo");
-        logo->setGeometry(QRect(5, 5, 60, 60));
+        logo->setGeometry(QRect(0, 10, 50, 50));
         logo->setBaseSize(QSize(0, 0));
         logo->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
 "\n"
@@ -80,7 +80,7 @@ public:
         logo->setLineWidth(0);
         label_2 = new QLabel(wadah_logo);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(90, 0, 500, 45));
+        label_2->setGeometry(QRect(70, 0, 500, 45));
         QFont font1;
         font1.setPointSize(20);
         font1.setBold(true);
@@ -88,7 +88,7 @@ public:
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label = new QLabel(wadah_logo);
         label->setObjectName("label");
-        label->setGeometry(QRect(90, 45, 500, 20));
+        label->setGeometry(QRect(70, 40, 500, 31));
         label->setFont(font);
         label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label->setScaledContents(true);
