@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/logo">
-        <file>logo/lokasi.png</file>
-    </qresource>
-</RCC>
