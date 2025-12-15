@@ -1,0 +1,17 @@
+# Build folder
+build/
+build-*/
+
+# Qt generated files
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Object & binary files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
