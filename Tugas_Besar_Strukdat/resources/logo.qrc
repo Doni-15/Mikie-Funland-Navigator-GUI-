@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/logo">
         <file>lokasi.png</file>
+        <file>cari_rute.png</file>
+        <file>tune.png</file>
     </qresource>
 </RCC>

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,5 +22,8 @@ class MainWindow : public QMainWindow{
     private:
         Ui::MainWindow *ui;
         FooterComponent *m_footer;
+
+        void logoRender();
+        void shadowRender();
 };
 #endif // MAINWINDOW_H
