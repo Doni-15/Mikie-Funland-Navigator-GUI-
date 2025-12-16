@@ -16,10 +16,7 @@ class HeaderComponent : public QWidget {
     Q_OBJECT
 
     public:
-        explicit HeaderComponent(QWidget *parent = nullptr);
-
-    private:
-        QLabel* createLogo(const QString &path, int size, int radius);
+        explicit HeaderComponent(const QString &logoPath, QWidget *parent = nullptr);
 };
 
 #endif // HEADER_COMPONENT_H

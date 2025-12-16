@@ -15,7 +15,7 @@ void FooterComponent::setupUI(){
     layout->setAlignment(Qt::AlignCenter);
 
     QString year = QString::number(QDate::currentDate().year());
-    QString mainText = "© " + year + " <b>Mikie Funland Navigator</b> • Kelompok 5";
+    QString mainText = "© " + year + " <b>Mikie Funland Navigator</b> • Kelompok 2";
 
     m_lblMain = new QLabel(mainText, m_frame);
     m_lblMain->setObjectName("lblMain");
@@ -34,23 +34,22 @@ void FooterComponent::setupUI(){
 void FooterComponent::setupStyle(){
     QString style = R"(
         QFrame {
-            background-color: rgba(207, 250, 254, 255);
+            background-color: rgb(24, 58, 183);
+            border : none;
         }
 
         QLabel#lblMain {
-            color: rgba(0, 0, 0, 255);
-            font-size: 15px;
+            color: rgba(255, 255, 255, 255);
+            font-size: 18px;
             font-weight: bold;
             font-family: "Segoe UI", sans-serif;
-            background-color: rgba(207, 250, 254, 255);
         }
 
         QLabel#lblSub {
-            color: rgba(10, 10, 10, 255);
+            color: rgba(180, 180, 180, 255);
             font-size: 12px;
             font-family: "Segoe UI", sans-serif;
             margin-top: 2px;
-            background-color: rgba(207, 250, 254, 255);
         }
     )";
 

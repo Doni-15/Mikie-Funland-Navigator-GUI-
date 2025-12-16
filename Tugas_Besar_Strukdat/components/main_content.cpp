@@ -1,11 +1,11 @@
-#include "header_component.h"
+#include "main_content.h"
 #include "components/renderlogo.h"
 
-HeaderComponent::HeaderComponent(const QString &logoPath, QWidget *parent) : QWidget(parent){
+MainContent::MainContent(const QString &logoPath, QWidget *parent) : QWidget(parent){
     int radius = 15;
 
     RenderLogo *logo = new RenderLogo(logoPath, radius, this);
-    logo->setFixedSize(50, 50);
+    logo->setFixedSize(48, 48);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0,0,0,0);

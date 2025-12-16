@@ -11,13 +11,17 @@ CONFIG += c++17
 SOURCES += \
     components/footer_component.cpp \
     components/header_component.cpp \
+    components/main_content.cpp \
+    components/renderlogo.cpp \
     main.cpp \
     MainWindow.cpp
 
 HEADERS += \
     MainWindow.h \
     components/footer_component.h \
-    components/header_component.h
+    components/header_component.h \
+    components/main_content.h \
+    components/renderlogo.h
 
 FORMS += \
     MainWindow.ui
