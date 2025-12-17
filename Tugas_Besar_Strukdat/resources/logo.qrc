@@ -3,5 +3,6 @@
         <file>lokasi.png</file>
         <file>cari_rute.png</file>
         <file>tune.png</file>
+        <file>favicon.png</file>
     </qresource>
 </RCC>
