@@ -38,6 +38,7 @@
     <font>
      <family>Sans Serif Collection</family>
      <pointsize>12</pointsize>
+     <fontweight>DemiBold</fontweight>
     </font>
    </property>
    <property name="styleSheet">
@@ -204,6 +205,12 @@ QFrame#header {
     </item>
     <item>
      <widget class="QScrollArea" name="main_content">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">QScrollBar:vertical {
     border: 1px solid rgb(10, 42, 78);
@@ -243,20 +250,23 @@ QFrame#main_content {
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>-166</y>
          <width>785</width>
-         <height>1000</height>
+         <height>1002</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>1000</height>
+         <height>0</height>
         </size>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <property name="spacing">
          <number>0</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SizeConstraint::SetMinAndMaxSize</enum>
         </property>
         <property name="leftMargin">
          <number>0</number>
@@ -272,6 +282,12 @@ QFrame#main_content {
         </property>
         <item>
          <widget class="QFrame" name="main_layout">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="cursor">
            <cursorShape>ArrowCursor</cursorShape>
           </property>
@@ -288,6 +304,9 @@ QFrame#main_content {
            <property name="spacing">
             <number>30</number>
            </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SizeConstraint::SetMinAndMaxSize</enum>
+           </property>
            <property name="leftMargin">
             <number>30</number>
            </property>
@@ -302,6 +321,18 @@ QFrame#main_content {
            </property>
            <item>
             <widget class="QFrame" name="cari_rute">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>400</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">QFrame#cari_rute{
 	background-color: rgb(255, 255, 255);
@@ -332,6 +363,18 @@ QFrame#main_content {
               </property>
               <item>
                <widget class="QFrame" name="judul_cari">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
@@ -528,6 +571,12 @@ QFrame#main_content {
               </item>
               <item>
                <widget class="QFrame" name="content_cari">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>270</height>
+                 </size>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                 </property>
@@ -555,6 +604,18 @@ QFrame#main_content {
                  </property>
                  <item>
                   <widget class="QFrame" name="frame_3">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>80</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
@@ -654,36 +715,34 @@ QFrame#main_content {
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: white;
-color: black;
-padding: 0 5px;
-border: 1px solid black;</string>
+                          <string notr="true">QComboBox{
+	background-color: white;
+	padding: 0 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: black;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid black;
+    background-color: white;
+    selection-background-color: #3d5afe;
+    selection-color: white;
+    outline: 0;
+	color: black;
+}
+
+QComboBox QAbstractItemView::item {
+	color: black;
+    min-height: 35px;
+    padding-left: 10px;
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+QComboBox QAbstractItemView::item::hover {
+	background-color: rgb(220, 220, 220);
+}</string>
                          </property>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
                         </widget>
                        </item>
                       </layout>
@@ -703,7 +762,7 @@ border: 1px solid black;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Shadow::Raised</enum>
                       </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_7">
+                      <layout class="QVBoxLayout" name="verticalLayout_16">
                        <property name="spacing">
                         <number>0</number>
                        </property>
@@ -757,36 +816,34 @@ border: 1px solid black;</string>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: white;
-color: black;
-padding: 0 5px;
-border: 1px solid black;</string>
+                          <string notr="true">QComboBox{
+	background-color: white;
+	padding: 0 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: black;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid black;
+    background-color: white;
+    selection-background-color: #3d5afe;
+    selection-color: white;
+    outline: 0;
+	color: black;
+}
+
+QComboBox QAbstractItemView::item {
+	color: black;
+    min-height: 35px;
+    padding-left: 10px;
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+QComboBox QAbstractItemView::item::hover {
+	background-color: rgb(220, 220, 220);
+}</string>
                          </property>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>New Item</string>
-                          </property>
-                         </item>
                         </widget>
                        </item>
                       </layout>
@@ -831,15 +888,15 @@ border: 1px solid black;</string>
                           </size>
                          </property>
                          <property name="text">
-                          <string>TextLabel</string>
+                          <string/>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="pushButton">
+                        <widget class="QPushButton" name="hapus_list">
                          <property name="maximumSize">
                           <size>
-                           <width>100</width>
+                           <width>120</width>
                            <height>40</height>
                           </size>
                          </property>
@@ -851,7 +908,8 @@ border: 1px solid black;</string>
                          <property name="styleSheet">
                           <string notr="true">color: rgb(0, 0, 0);
 border: 1px solid rgb(188, 188, 188);
-background-color: rgb(229, 229, 229);</string>
+background-color: rgb(229, 229, 229);
+border-radius: 5px;</string>
                          </property>
                          <property name="text">
                           <string>Reset</string>
@@ -866,6 +924,18 @@ background-color: rgb(229, 229, 229);</string>
                  </item>
                  <item>
                   <widget class="QFrame" name="wadah_jalur">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>150</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
@@ -875,6 +945,7 @@ background-color: rgb(229, 229, 229);</string>
                    <property name="styleSheet">
                     <string notr="true">QFrame#wadah_jalur{
 	background-color: rgb(166, 206, 255);
+	border-radius: 10px;
 }</string>
                    </property>
                    <property name="frameShape">
@@ -883,6 +954,162 @@ background-color: rgb(229, 229, 229);</string>
                    <property name="frameShadow">
                     <enum>QFrame::Shadow::Raised</enum>
                    </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>10</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>10</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="frame_10">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(166, 206, 255);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_4">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>15</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>2</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>15</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>2</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="jarak_total">
+                         <property name="minimumSize">
+                          <size>
+                           <width>110</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Sans Serif Collection</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QFrame {
+    background-color: rgb(138, 255, 200); 
+    color: rgb(0, 85, 0);
+    border: 1px rgb(76, 255, 73);
+    border-radius: 10px;
+	padding: 0px 10px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>Tidak ada jalur ditemukan</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignmentFlag::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_2">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="jumlah_lokasi">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Sans Serif Collection</family>
+                           <pointsize>10</pointsize>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(0, 0, 0);
+</string>
+                         </property>
+                         <property name="text">
+                          <string>0 lokasi</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignmentFlag::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="isi_lokasi">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(166, 206, 255);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
@@ -893,6 +1120,18 @@ background-color: rgb(229, 229, 229);</string>
            </item>
            <item>
             <widget class="QFrame" name="telusuri_wahana">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>400</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">QFrame#telusuri_wahana{
 	background-color: rgb(255, 255, 255);
@@ -923,6 +1162,18 @@ background-color: rgb(229, 229, 229);</string>
               </property>
               <item>
                <widget class="QFrame" name="judul_telusuri">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
@@ -1172,7 +1423,7 @@ background-color: rgb(229, 229, 229);</string>
               <item>
                <widget class="QFrame" name="content_telusuri">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(0, 0, 0);</string>
+                 <string notr="true">background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::Shape::StyledPanel</enum>
@@ -1180,6 +1431,167 @@ background-color: rgb(229, 229, 229);</string>
                 <property name="frameShadow">
                  <enum>QFrame::Shadow::Raised</enum>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>15</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>15</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_8">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <property name="spacing">
+                     <number>15</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLineEdit" name="search_bar">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Sans Serif Collection</family>
+                        <pointsize>12</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: white;
+color: black;
+padding: 0 5px;
+border: 1px solid black;
+border-radius: 5px;</string>
+                      </property>
+                      <property name="text">
+                       <string>Search...</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="kategori">
+                      <property name="minimumSize">
+                       <size>
+                        <width>200</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Sans Serif Collection</family>
+                        <pointsize>12</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox{
+	background-color: white;
+	padding: 0 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: black;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid black;
+    background-color: white;
+    selection-background-color: #3d5afe;
+    selection-color: white;
+    outline: 0;
+	color: black;
+}
+
+QComboBox QAbstractItemView::item {
+	color: black;
+    min-height: 35px;
+    padding-left: 10px;
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+QComboBox QAbstractItemView::item::hover {
+	background-color: rgb(220, 220, 220);
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="wadah_tempat">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame#wadah_tempat{
+	background-color: rgb(222, 222, 222);
+	border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -1187,6 +1599,12 @@ background-color: rgb(229, 229, 229);</string>
            </item>
            <item>
             <widget class="QFrame" name="footer">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>80</height>
+              </size>
+             </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>

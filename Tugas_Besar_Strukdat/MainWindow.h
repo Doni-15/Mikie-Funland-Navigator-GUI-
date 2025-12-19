@@ -25,5 +25,10 @@ class MainWindow : public QMainWindow{
 
         void logoRender();
         void shadowRender();
+        void getListItems();
+
+    private slots:
+        void on_hapus_list_clicked();
+        void updateRuteOtomatis();
 };
 #endif // MAINWINDOW_H
