@@ -9,6 +9,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    components/data_render.cpp \
+    components/djikstraalgorithm.cpp \
     components/footer_component.cpp \
     components/header_component.cpp \
     components/main_content.cpp \
@@ -18,6 +20,8 @@ SOURCES += \
 
 HEADERS += \
     MainWindow.h \
+    components/data_render.h \
+    components/djikstraalgorithm.h \
     components/footer_component.h \
     components/header_component.h \
     components/main_content.h \
