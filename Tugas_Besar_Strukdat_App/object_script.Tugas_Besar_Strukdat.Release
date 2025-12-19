@@ -1,0 +1,16 @@
+release/data_render.o
+release/djikstraalgorithm.o
+release/footer_component.o
+release/header_component.o
+release/main_content.o
+release/mergesort.o
+release/renderlogo.o
+release/searchingalgorithm.o
+release/main.o
+release/MainWindow.o
+release/qrc_logo.o
+release/moc_MainWindow.o
+release/moc_footer_component.o
+release/moc_header_component.o
+release/moc_main_content.o
+release/moc_renderlogo.o
