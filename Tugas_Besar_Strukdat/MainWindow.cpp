@@ -10,6 +10,7 @@
 #include "components/data_render.h"
 #include "components/djikstraalgorithm.h"
 #include "components/searchingalgorithm.h"
+#include "components/mergesort.h"
 
 using namespace Qt;
 
@@ -28,6 +29,29 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
     connect(ui->kategori, &QComboBox::currentTextChanged, this, &MainWindow::kategoriLokasi);
     connect(ui->search_bar, &QLineEdit::textEdited, this, &MainWindow::cariNamaLokasi);
+
+    connect(ui->tombol_rating, &QPushButton::clicked, this, &MainWindow::urutkanRating);
+}
+
+void MainWindow::urutkanRating(){
+    int tinggiMinimalAwal = 400;
+    int tinggiPerItem = 90;
+    int tinggiHeaderDanMargin = 100;
+
+    QList<QString> hasilSorting = MergeSort::jalankanSorting(
+        data_cari,
+        data_peta_lengkap
+    );
+
+    SearchingAlgorithm::renderHasilKeUI(hasilSorting, ui->wadah_tempat);
+
+    int totalTinggiKonten = (hasilSorting.size() * tinggiPerItem) + tinggiHeaderDanMargin;
+    int tinggiFinal = std::max(tinggiMinimalAwal, totalTinggiKonten);
+
+    ui->telusuri_wahana->setMinimumHeight(tinggiFinal);
+    if(ui->telusuri_wahana->parentWidget() && ui->telusuri_wahana->parentWidget()->layout()) {
+        ui->telusuri_wahana->parentWidget()->layout()->activate();
+    }
 }
 
 void MainWindow::cariNamaLokasi(const QString &cari_lokasi){

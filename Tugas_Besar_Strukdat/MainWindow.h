@@ -35,5 +35,6 @@ class MainWindow : public QMainWindow{
         void updateRuteOtomatis();
         void kategoriLokasi(const QString &kategori);
         void cariNamaLokasi(const QString &cari_lokasi);
+        void urutkanRating();
 };
 #endif // MAINWINDOW_H
