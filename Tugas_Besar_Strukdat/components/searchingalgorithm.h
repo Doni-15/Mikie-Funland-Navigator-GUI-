@@ -28,7 +28,6 @@ class SearchingAlgorithm{
             QLabel *labelJumlah
         );
 
-    private:
         static void renderHasilKeUI(
             const QStringList& hasil,
             QWidget* parentWidget
