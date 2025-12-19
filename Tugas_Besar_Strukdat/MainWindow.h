@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QString>
+#include <QStringList>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,6 +23,8 @@ class MainWindow : public QMainWindow{
     private:
         Ui::MainWindow *ui;
         FooterComponent *m_footer;
+        QStringList data_cari;
+        QString kategori_dipakai;
 
         void logoRender();
         void shadowRender();
@@ -30,5 +33,7 @@ class MainWindow : public QMainWindow{
     private slots:
         void on_hapus_list_clicked();
         void updateRuteOtomatis();
+        void kategoriLokasi(const QString &kategori);
+        void cariNamaLokasi(const QString &cari_lokasi);
 };
 #endif // MAINWINDOW_H
