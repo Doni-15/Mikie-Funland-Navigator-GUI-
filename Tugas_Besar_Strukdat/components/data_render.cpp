@@ -22,6 +22,7 @@ void DataRender::RenderListKategori(QComboBox *comboBox) {
         return;
 
     comboBox->clear();
+    comboBox->addItem("<none>");
     comboBox->addItem("Semua Kategori");
 
     QStringList kategoriUnik;

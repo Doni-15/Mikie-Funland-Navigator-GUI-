@@ -14,7 +14,9 @@ SOURCES += \
     components/footer_component.cpp \
     components/header_component.cpp \
     components/main_content.cpp \
+    components/mergesort.cpp \
     components/renderlogo.cpp \
+    components/searchingalgorithm.cpp \
     main.cpp \
     MainWindow.cpp
 
@@ -25,7 +27,9 @@ HEADERS += \
     components/footer_component.h \
     components/header_component.h \
     components/main_content.h \
-    components/renderlogo.h
+    components/mergesort.h \
+    components/renderlogo.h \
+    components/searchingalgorithm.h
 
 FORMS += \
     MainWindow.ui

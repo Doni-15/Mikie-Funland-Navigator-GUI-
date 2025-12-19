@@ -107,7 +107,7 @@ void DjikstraAlgorithm::renderRuteKeUI(const QStringList& rute, QWidget* parentW
         labelNama->setStyleSheet("font-weight: bold; font-size: 13px; color: #2c3e50;");
 
         QLabel* labelTipe = new QLabel(tipe);
-        labelTipe->setStyleSheet("background-color: #dfe6e9; color: #636e72; padding: 2px 6px; border-radius: 4px; font-size: 10px;");
+        labelTipe->setStyleSheet("background-color: #dfe6e9; color: rgb(22, 36, 85); padding: 2px 6px; border-radius: 4px; font-size: 10px;");
 
         rowLayout->addWidget(dot);
         rowLayout->addSpacing(10);
@@ -122,6 +122,7 @@ void DjikstraAlgorithm::renderRuteKeUI(const QStringList& rute, QWidget* parentW
             QHBoxLayout* lineLayout = new QHBoxLayout(lineContainer);
             lineLayout->setContentsMargins(16, 0, 0, 0);
             lineLayout->setSpacing(0);
+
             QFrame* line = new QFrame();
             line->setFixedWidth(2);
             line->setFixedHeight(20);

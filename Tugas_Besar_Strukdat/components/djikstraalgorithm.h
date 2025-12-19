@@ -18,10 +18,10 @@ public:
         QWidget* parentWidget,
         QLabel* labelJarak,
         QLabel* labelJumlah
-        );
+    );
 
-private:
-    static void renderRuteKeUI(const QStringList& rute, QWidget* parentWidget);
+    private:
+        static void renderRuteKeUI(const QStringList& rute, QWidget* parentWidget);
 };
 
 #endif // DJIKSTRAALGORITHM_H
